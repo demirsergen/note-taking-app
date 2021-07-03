@@ -1,7 +1,7 @@
 import Notes from "./components/Notes";
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-import { nanoid } from "nanoid";
+import nextId from "react-id-generator";
 
 export default function App() {
   const [notes, setNotes] = useState(() => {
@@ -20,7 +20,7 @@ export default function App() {
   const addNote = (text) => {
     const date = new Date();
     const newNote = {
-      id: nanoid(),
+      id: nextId(),
       text: text,
       date: date.toLocaleDateString()
     };
