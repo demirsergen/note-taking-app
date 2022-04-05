@@ -1,8 +1,25 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(17,24,32);
+  padding: 2em;
+}
+.app {
   font-family: sans-serif;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.title {
+  color: white;
+  margin-bottom: 1em;
 }
 
 .notes-list {
@@ -12,10 +29,10 @@
 }
 
 .note {
-  background-color: #fef68a;
+  background-color: #d4cb4d;
   border-radius: 10px;
   padding: 1rem;
-  min-height: 170px;
+  min-height: 190px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,8 +41,12 @@
   word-wrap: break-word;
 }
 
+.note .text {
+  font-size: 1rem;
+}
+
 .note.new {
-  background-color: #67d7cc;
+  background-color: #3c978e;
 }
 
 .note.new textarea {
@@ -33,6 +54,11 @@
   border: none;
   outline: none;
   resize: none;
+}
+
+.note.new textarea::placeholder {
+  color: white;
+  font-size: 1rem;
 }
 
 .note-footer {
@@ -43,6 +69,7 @@
 
 .icon {
   cursor: pointer;
+  font-size: 1.3rem;
 }
 
 .save {

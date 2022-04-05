@@ -34,8 +34,8 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Notes</h1>
+    <div className="app">
+      <h1 className="title">Notes</h1>
       <Notes
         notes={notes}
         handleAddNote={addNote}
